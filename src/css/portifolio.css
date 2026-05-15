@@ -14,7 +14,7 @@
 }
 
 body{
-    background: var(--bg-fundo);
+    background: var(--bg-color4);
     color:var(--bg-color1);
 }
 
@@ -22,7 +22,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    background:var(--bg-color2);
+    background:var(--bg-fundo);
     padding: 20px 5%;
     font-family: "Fredoka", sans-serif;
 }
@@ -30,7 +30,7 @@ header{
 header h1{
     padding-right: 0;
     text-align: center;
-    color: var(--text-color);
+    color: var(--bg-color2);
 }
 
 #logo{
@@ -50,30 +50,31 @@ nav ul li{
 }
 
 nav ul li a{
-    color: var(--text-color);
+    color: var(--bg-color2);
     text-decoration: none;
     font-size: 20px;
     font-family: "Fredoka", sans-serif;
 }
 
 nav ul li a:hover{
-    color: var(--bg-color4);
+    color: var(--bg-color3);
 }
 
 #lista-produtos{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     width: 90%;
     margin: 40px auto;
 }
 
 .card-portifolio{
-    background-color: var(--bg-color4);
+    background-color: var(--bg-fundo);
     width: 220px;
     min-height: 320px;
     padding: 16px;
     border-radius: 10px;
+    border: 2px, solid, var(--bg-fundo);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,6 +86,7 @@ nav ul li a:hover{
 
 .card-portifolio:hover{
     transform: translateY(-8px);
+    border-color: #126700;
 }
 
 .card-portifolio img{
