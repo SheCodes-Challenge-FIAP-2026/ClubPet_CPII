@@ -2,6 +2,7 @@
     --bg-color1:#126700;   
     --bg-color2:#086300;
     --b-color3: #00ff40;
+    --bg-color4: #71ff95;
     --bg-fundo: #ffffff;   
     --text-color: #fff;
 }
@@ -29,7 +30,7 @@ body{
     justify-content:center;
     align-items:center;
     opacity:1;
-    transtion: opacity 1s ease-in-out; /*faz um efeito suave de entrada e saída*/
+    transition: opacity 1s ease-in-out; /*faz um efeito suave de entrada e saída*/
 }
 
 #imgHero{
@@ -301,3 +302,4 @@ footer #copy{
         padding: 30px 16px 8px;
     }
 }
+
