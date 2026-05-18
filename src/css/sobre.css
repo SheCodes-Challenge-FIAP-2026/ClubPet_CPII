@@ -1,86 +1,242 @@
 :root{
     --bg-color1:#126700;   
     --bg-color2:#086300;
-    --b-color3: #00ff40;
-    --bg-color4: #71ff95;
-    --bg-fundo: #ffffff;   
-    --text-color: #fff;
+    --bg-color3:#00ff40;
+    --bg-color4:#71ff95;
+    --bg-fundo:#ffffff;   
+    --text-color:#fff;
+    --shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background: var(--bg-fundo);
+    background:var(--bg-fundo);
     color:var(--bg-color1);
+    font-family:"Fredoka", sans-serif;
 }
 
+/* HEADER */
+
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    display:flex;
+    justify-content:space-between;
+    align-items:center; 
     background:var(--bg-fundo);
-    padding: 20px 5%;
-    font-family: "Fredoka", sans-serif;
+    padding:20px 5%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.09);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 header h1{
-    padding-right: 0;
-    text-align: center;
+    font-size:38px;
+    color:var(--bg-color1);
+}
+
+header h1 span{
+    color:var(--bg-color3);
 }
 
 #logo{
-    width: 90px;
-    height: 90px;
+    width:90px;
+    height:90px;
     border-radius:50%;
-    margin-top:10px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+#logo:hover{
+    transform:scale(1.05);
 }
 
 nav ul{
-    display: flex;
-    list-style: none;
-}
-
-nav ul li{
-    padding: 0 15px;
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
 nav ul li a{
-    color: var(--bg-color1);
-    text-decoration: none;
-    font-size: 20px;
-    font-family: "Fredoka", sans-serif;
+    color:var(--bg-color1);
+    text-decoration:none;
+    font-size:20px;
+    transition:0.3s;
+    font-weight:500;
 }
 
 nav ul li a:hover{
-    color: var(--btn-color);
+    color:var(--bg-color3);
 }
 
+/* MAIN */
+
+main{
+    width:100%;
+    padding: 60px 8%;
+}
+
+main h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:var(--bg-color1);
+}
+
+/* SEÇÕES */
+
+.secao{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:80px;
+    background:var(--bg-fundo);
+    padding:40px;
+    border-radius:25px;
+    transition:0.4s;
+}
+
+.left{
+    flex-direction:row;
+}
+
+.right{
+    flex-direction:row-reverse;
+}
+
+.secao p{
+    width:50%;
+    font-size:19px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.secao img{
+    width:420px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow: var(--shadow);
+}
+
+.secao img:hover{
+    transform:scale(1.03);
+}
+
+/* EQUIPE */
+
+.equipe{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.card{
+    width:230px;
+    background:var(--bg-fundo);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+    transition:0.4s;
+}
+
+.card img:hover{
+    transform:scale(1.05);
+}
+
+.card h3{
+    font-size:22px;
+    margin-top:10px;
+}
+/* FOOTER */
 
 footer{
-    background-color: var(--bg-color1);
-    padding: 80px;
+    background-color:var(--bg-color1);
+    padding:60px 20px;
+    text-align:center;
+    margin-top:80px;
 }
 
 footer h3{
-    color: var(--bg-fundo);
-    font-family: "Fredoka", sans-serif;
-    padding-bottom: 50px;
+    color:var(--bg-fundo);
+    font-size:32px;
+    padding-bottom:30px;
 }
 
 footer p{
-    color: var(--bg-fundo);
-    font-family: "Fredoka", sans-serif;
-    font-size: 18px;
+    color:var(--bg-fundo);
+    font-size:18px;
+    margin:10px 0;
 }
 
 footer #copy{
-    color: var(--bg-fundo);
-    font-family: "Fredoka", sans-serif;
-    font-size: 14px;
-    text-align: center;
-    padding-top: 40px;
+    font-size:14px;
+    padding-top:30px;
+    opacity:0.8;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    main h2{
+        font-size:34px;
+    }
+
+    .secao,
+    .left,
+    .right{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .secao p{
+        width:100%;
+        font-size:17px;
+    }
+
+    .secao img{
+        width:100%;
+        height:auto;
+    }
+
+    .equipe{
+        flex-direction:column;
+        align-items:center;
+    }
 }
