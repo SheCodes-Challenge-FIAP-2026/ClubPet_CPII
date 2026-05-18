@@ -94,7 +94,17 @@ h2{
     margin-top: 20px;
 }
 
+.container{
+    display: flex;
+}
 
+.container img{
+    width: 400px;
+    height: 300px;
+    margin-top: 140px;
+    margin-right: 140px;
+    
+}
 .formulario{
     display: flex;
     flex-direction: column;
