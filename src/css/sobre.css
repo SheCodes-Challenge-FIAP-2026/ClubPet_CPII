@@ -255,133 +255,154 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* RESPONSIVIDADE */
+/* ========================= */
+/* RESPONSIVIDADE COMPLETA */
+/* ========================= */
 
-@media(max-width:900px){
+@media screen and (max-width: 768px){
 
-    header{
-        flex-direction:column;
-        gap:15px;
+    /* HEADER */
+
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 5%;
+        text-align: center;
     }
 
-    nav ul{
-        flex-direction:column;
-        text-align:center;
-        gap:10px;
+    header h1 {
+        padding-right: 0;
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* MAIN */
+
+    main{
+        width: 100%;
+        padding: 40px 20px;
     }
 
     main h2{
-        font-size:34px;
+        font-size: 32px;
+        margin-bottom: 35px;
     }
 
-    .secao,
+    /* SEÇÕES */
+
+    .secao{
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
     .left,
     .right{
-        flex-direction:column;
-        text-align:center;
+        flex-direction: column !important;
     }
 
     .secao p{
-        width:100%;
-        font-size:17px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: justify;
     }
 
     .secao img{
-        width:100%;
-        height:auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
+
+    /* EQUIPE */
 
     .equipe{
-        flex-direction:column;
-        align-items:center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
+
+    .card{
+        width: 100%;
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .card img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .card h3{
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-superior {
+        align-items: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+
 }
 
-footer {
-    background-color: var(--bg-color1);
-    padding: 60px 80px 20px;
-}
+@media (max-width: 480px) {
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
 
-.footer-conteudo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+    header h1 {
+        font-size: 1.3rem;
+    }
 
-.footer-superior {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 250px;
-}
+    nav ul li a {
+        font-size: 16px;
+    }
+    footer {
+        padding: 30px 16px 16px;
+    }
 
-.footer-logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
+    .footer-superior h2 {
+        font-size: 22px;
+    }
 
-.footer-superior h2 {
-    font-family: "Fredoka", sans-serif;
-    font-size: 28px;
-    color: var(--bg-fundo);
-}
+    .footer-informacoes h3,
+    .footer-links h3 {
+        font-size: 18px;
+    }
 
-.footer-superior h2 span {
-    color: var(--b-color3);
-}
+    .footer-informacoes p,
+    .footer-links ul li a {
+        font-size: 14px;
+    }
 
-.footer-superior p {
-    font-family: "Fredoka", sans-serif;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.5;
-}
+    .footer-logo {
+        width: 55px;
+        height: 55px;
+    }
 
-.footer-informacoes h3,
-.footer-links h3 {
-    font-family: "Fredoka", sans-serif;
-    font-size: 20px;
-    color: var(--b-color3);
-    margin-bottom: 16px;
-}
+    .footer-copy p {
+        font-size: 12px;
+    }
 
-.footer-informacoes p {
-    font-family: "Fredoka", sans-serif;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 8px;
-}
-
-.footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links ul li a {
-    font-family: "Fredoka", sans-serif;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: var(--b-color3);
-}
-
-.footer-copy {
-    text-align: center;
-    padding-top: 20px;
-}
-
-.footer-copy p {
-    font-family: "Fredoka", sans-serif;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.5);
 }
