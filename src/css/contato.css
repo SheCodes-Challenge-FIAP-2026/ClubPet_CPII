@@ -80,10 +80,8 @@ main{
     width: 100%;
     max-width: 550px;
     padding: 25px;
-    margin: 74px auto;
-    /* margin-top: 20px; */
+    margin: 0;
     border-radius: 10px;
-   
 }
 
 h2{
@@ -96,15 +94,19 @@ h2{
 
 .container{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 5%;
 }
 
 .container img{
     width: 400px;
     height: 300px;
-    margin-top: 140px;
-    margin-right: 140px;
-    
+    margin: 0;
 }
+
 .formulario{
     display: flex;
     flex-direction: column;
@@ -270,6 +272,11 @@ footer {
     .formulario button{
         width: 100%;
     }
+   
+
+     .container img{
+        max-width: 100%;
+    }
 
    
      footer {
@@ -318,6 +325,17 @@ footer {
     .formulario input,
     .formulario textarea{
         font-size: 13px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        order: 1;
     }
 }
 
