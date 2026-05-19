@@ -1,7 +1,7 @@
 const produto = [
     {
         nome: 'Ração Premium para cães',
-        img: '../assets/img/card_racao.png',
+        img: '../assets/img/card_racao',
         descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit.',
         preco: 137.90
     },
